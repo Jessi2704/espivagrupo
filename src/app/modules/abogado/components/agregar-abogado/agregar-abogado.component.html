@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Grupo EspiVa</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item ">
+        <a class="nav-link" href="/abogado/admin "><u>Lista</u></a>
+      </li>
+  <li class="nav-item">
+      <a class="nav-link disabled " >ABOGADOS</a>
+    </li>
+    </ul>
+  </div>
+</nav>
+
+
+<style>
+  .jumbotron {
+        background-color:#217DA2;  
+          color: #ffffff;
+        }
+</style>
+
+
+<div class="jumbotron ">
+  <div class="col-md-4 offset-md-4">
+  <form [formGroup] = "Abogadosform" (ngSubmit) = "addAbogado(Abogadosform.value)">
+    <div class = "form-group">
+      <label>CEDULA: </label>
+      <input type= "text" formControlName = "cedula" class="form-control" >
+  </div>
+    <div class="form-row">
+    <div class = "form-group col-md-6 ">
+        <label>NOMBRE: </label>
+        <input type= "text" formControlName = "nombre" class="form-control" >
+    </div>
+
+    <div class = "form-group">
+        <label>APELLIDO: </label>
+        <input type= "text" formControlName = "apellido" class="form-control" >
+    </div>
+    </div>
+
+    <div class="form-row">
+    <div class = "form-group col-md-6">
+      <label>DIRECCION: </label>
+      <input type= "text" formControlName = "direccion" class="form-control">
+  </div>
+  <div class = "form-group">
+    <label>CELULAR: </label>
+    <input type= "tel" formControlName = "celular" class="form-control" >
+</div>
+    </div> 
+
+  <div class = "form-group">
+      <label>EMAIL: </label>
+      <input type= "email" formControlName = "email" class="form-control" >
+  </div>
+
+
+  <div class = "form-group">
+    <label>PROFESION:</label>
+    <select formControlName = "profesion" class="form-control">
+      <option selected >TRANSITO</option>
+      <option selected >CIVIL</option>
+    </select>
+  </div>
+
+
+    <div>
+        <button type= "submit" >GUARDAR </button>
+    </div>
+  
+</form>
+    </div>
+
+
+

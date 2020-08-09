@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Grupo EspiVa</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/usuario/agregar">Agregar</a>
+        </li>
+    <li class="nav-item">
+        <a class="nav-link disabled " >ABOGADOS</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <style>
+    .jumbotron {
+        background-color:#217DA2;  
+          color: #ffffff;
+        }
+</style>
+
+    <div class="jumbotron text-center"style=" height: 600px; ">
+       
+<table class ="table">
+    <tr>
+        <th class="text-white " scope= "col"> Cedula </th>
+        <th class="text-white" scope= "col">Nombre </th>
+        <th class="text-white" scope= "col">Apellido </th>
+        <th class="text-white" scope= "col">Email </th>
+        <th class="text-white"scope= "col"> Celular</th>
+        
+    </tr>
+    
+    <tbody *ngFor = "let Usuario  of usuario">
+<tr>
+            <td class="text-white">{{Usuario.cedula_usuario}} </td>
+            <td class="text-white">{{Usuario.nombre_usuario}} </td>
+            <td class="text-white">{{Usuario.apellido_usuario}} </td>
+            <td class="text-white">{{Usuario.email_usuario}} </td>
+            <td class="text-white">{{Usuario.celular_usuario}} </td>
+            
+</tr>
+
+    
+    </tbody>
+</table>
+</div>
+

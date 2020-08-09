@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Grupo EspiVa</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+  
+    <li class="nav-item">
+        <a class="nav-link disabled " >CITAS</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+  
+  
+  <style>
+    .jumbotron {
+          background-color:#217DA2;  
+            color: #ffffff;
+          }
+  </style>
+  
+  
+  <div class="jumbotron ">
+    <div class="col-md-4 offset-md-4">
+    <form [formGroup] = "Citaform" (ngSubmit) = "addCita(Citaform.value)">
+      <div class = "form-group">
+        <label>CEDULA USUARIO: </label>
+        <input type= "text" formControlName = "cedula_usuario" class="form-control" >
+    </div>
+      <div class="form-row">
+      <div class = "form-group col-md-6 ">
+          <label>FECHA CITA: </label>
+          <input type= "date" formControlName = "fecha_inicio_cita" class="form-control" >
+      </div>
+  
+      <div class = "form-group">
+          <label>HORA CITA: </label>
+          <input type= "time" formControlName = "hora_inicio_cita" class="form-control" >
+      </div>
+      </div>
+  
+      <div class="form-row">
+      <div class = "form-group col-md-6">
+        <label>LUGAR CITA: </label>
+        <input type= "text" formControlName = "lugar_cita" class="form-control">
+    </div>
+
+    <div class = "form-group">
+      <label>HORA FIN CITA: </label>
+      <input type= "time" formControlName = "hora_fin_cita" class="form-control" >
+  </div>
+      </div> 
+  
+      <div>
+          <button type= "submit" >GUARDAR </button>
+      </div>
+    
+  </form>
+      </div>
+
+
+
+
+

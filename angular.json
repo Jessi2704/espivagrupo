@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "espiva"
+    }
+  },
+  "defaultProject": "espiva",
+  "cli": {
+    "analytics": "acbe1013-78af-4940-bcac-d968c0e5832c"
+  }
 }

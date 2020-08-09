@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Grupo EspiVa</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item ">
+          <a class="nav-link" href="/cita/agregar">Solicitar Cita</a>
+        </li>
+    <li class="nav-item">
+        <a class="nav-link disabled " >ABOGADOS</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <style>
+     .jumbotron {
+        background-color:#217DA2;  
+          color: #ffffff;
+        }
+</style>
+
+    
+       
+    <tbody *ngFor = "let Abogados  of abogado" >
+
+      <div class="jumbotron text-center"style=" height: 650px; width:420px;margin-left: 20px ">
+        
+  <div class="card" style="width: 20rem; margin-left: 20px;">
+    <img src="https://lh3.googleusercontent.com/proxy/t5N-MMRwLcnW3JUkzCGTyF3TUeZZoXt7-lRa2pZ00Pkrcvuk3kVQwoejveNr_ERCmAJ8MJ0FADI8Q6g6wYZJGT0ex91jNaOGSYBkHfw"
+    class="card-img-top" alt="..." >
+    <div class="card-body">
+      </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-dark" >{{Abogados.nombre}} {{Abogados.apellido}}</li>
+      <li class="list-group-item text-dark">{{Abogados.direccion}}</li>
+      <li class="list-group-item text-dark">{{Abogados.celular}} / {{Abogados.email}}</li>
+      <li class="list-group-item text-dark">ESPECIALIDAD : {{Abogados.profesion}}</li>
+    </ul>
+  </div>
+  
+</div>
+    </tbody>
+
+
+
+
