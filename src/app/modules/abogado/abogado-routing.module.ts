@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {ListarAbogadoComponent} from './components/listar-abogado/listar-abogado.component';
 import{AgregarAbogadoComponent} from './components/agregar-abogado/agregar-abogado.component';
 import {ListAbogAdminComponent} from './components/list-abog-admin/list-abog-admin.component';
+import {ModalabogadosComponent} from './components/modalabogados/modalabogados.component';
   import { from } from 'rxjs';
 
   const routes: Routes = 
@@ -17,6 +18,9 @@ import {ListAbogAdminComponent} from './components/list-abog-admin/list-abog-adm
 
   {
     path:'admin', component:ListAbogAdminComponent
+  },
+  {
+    path:'modificar/:ide', component:ModalabogadosComponent
   }
 ];
 

@@ -17,28 +17,35 @@ export class AbogadosService {
 
   constructor(private http:HttpClient) 
   { }
-  getAbogado():Observable<abogado>
+  getAbogado():Observable<abogado> //listar
   {
     return this.http.get<abogado>('http://localhost:9090/abogados/buscarabogado');
   }
 
+  getAbogadoid(id: number){
+    return this.http.get<abogado>('http://localhost:9090/abogados/buscarabogado/'+ id);
+  }
 
-  deleteAbogado(Abogado:any, id:number){
+  deleteAbogado(Abogado:any, id:number){//eliminiar
     let json=JSON.stringify(Abogado);
     return this.http.delete('http://localhost:9090/abogados/eliminarabogado/'+ id);
   }
 
-  setAbogado(Abogado: abogado)
+
+  setAbogado(Abogado: abogado) //agregar
   {
     let json=JSON.stringify(Abogado);
     return this.http.post('http://localhost:9090/abogados/agregarabogado/', json,httpOptions);
   }
 
-  editAbogado(abogado:any, id:number){ 
+
+  editAbogado(abogado:any, ide:number){ //modificar
     let json=JSON.stringify(abogado);
-    return this.http.put('http://localhost:9090/abogados/agregarabogado/' +"/cliente/"+ id, json,httpOptions);
+    return this.http.put('http://localhost:9090/abogados/modificarabogado/' + ide, json,httpOptions);
   }
 
   }
+
+
 
 

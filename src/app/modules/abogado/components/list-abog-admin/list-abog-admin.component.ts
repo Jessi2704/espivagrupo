@@ -24,5 +24,10 @@ export class ListAbogAdminComponent implements OnInit {
     this.abogadoservicio.deleteAbogado(abogado, id).subscribe(data => console.log(data));
     this.router.navigate(['/admin']);
   }
+
+  editAbogado(abogadoid:number){
+    this.router.navigate(['/abogado/modificar/', abogadoid]);
+  }
 }
 
+ 

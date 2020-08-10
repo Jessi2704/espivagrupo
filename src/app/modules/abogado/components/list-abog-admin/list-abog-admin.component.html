@@ -27,6 +27,7 @@
 <div class="jumbotron text-center">
         <table class ="table">
             <tr>
+              <th class="text-white " scope= "col">ID </th>
                 <th class="text-white " scope= "col">Cedula </th>
                 <th class="text-white" scope= "col">Nombre </th>
                 <th class="text-white" scope= "col">Apellido </th>
@@ -41,6 +42,7 @@
             
             <tbody *ngFor = "let Abogados  of abogado" >
         <tr>
+          <td class="text-white">{{Abogados.id_user}} </td>
                     <td class="text-white">{{Abogados.cedula}} </td>
                     <td class="text-white"> {{Abogados.nombre}}</td>
                     <td class="text-white">{{Abogados.apellido}} </td>
@@ -48,8 +50,11 @@
                     <td class="text-white"> {{Abogados.celular}}</td>
                     <td class="text-white"> {{Abogados.direccion}}</td>
                     <td class="text-white"> {{Abogados.profesion}}</td>
-                    <td class="text-white"> 
-                         
+                    <td>
+                      <button class="btn btn-primary" (click)="editAbogado(Abogados.id_user)" ></button>
+
+          
+  
                     </td>
                     <td > <button  type="button" class="btn btn-danger" (click) ="deleteAbogado(abogado, Abogados.id_user)"  ></button> </td>
                     
