@@ -1,0 +1,53 @@
+ <style>
+    .jumbotron {
+          background-color:#217DA2;  
+            color: #ffffff;
+          }
+  </style>
+  
+  
+  <div class="jumbotron ">
+    <div class="col-md-4 offset-md-4">
+    <form [formGroup] = "Citaform" (ngSubmit) = "editCita(Citaform.value)">
+      
+        <div class="form-group">
+            <label>ABOGADO:</label>
+            <input type= "text" class="form-control"  formControlName = "cedula_abogado" />
+        </div>
+
+        <div class="form-group">
+        <label>CEDULA USUARIO:</label>
+        <input type= "text" class="form-control"  formControlName = "cedula_usuario" />
+    </div>
+    
+            
+            <div class = "form-group col-md-6 ">
+                <label>FECHA CITA: </label>
+                <input type= "date" formControlName = "fecha_inicio_cita" class="form-control" >
+            </div>
+        
+            <div class = "form-group">
+                <label>HORA CITA: </label>
+                <input type= "time" formControlName = "hora_inicio_cita" class="form-control" >
+            </div>
+        
+            <div class="form-row">
+            <div class = "form-group col-md-6">
+              <label>LUGAR CITA: </label>
+              <input type= "text" formControlName = "lugar_cita" class="form-control">
+          </div>
+      
+          <div class = "form-group">
+            <label>HORA FIN CITA: </label>
+            <input type= "time" formControlName = "hora_fin_cita" class="form-control" >
+        </div>
+            </div> 
+        
+            <div>
+                <button type= "submit" >GUARDAR </button>
+            </div>
+          
+        </form>
+            </div>
+        </div>
+    

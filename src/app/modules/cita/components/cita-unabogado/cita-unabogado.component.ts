@@ -7,36 +7,31 @@ import { Validators } from '@angular/forms';
 import {abogado} from '../../../abogado/model/abogado.interface';
 import {AbogadosService} from '../../../abogado/servicios/abogados.service';
 
-
 @Component({
-  selector: 'app-agregar-cita',
-  templateUrl: './agregar-cita.component.html',
-  styleUrls: ['./agregar-cita.component.css']
+  selector: 'app-cita-unabogado',
+  templateUrl: './cita-unabogado.component.html',
+  styleUrls: ['./cita-unabogado.component.css']
 })
-export class AgregarCitaComponent implements OnInit {
-
-ide: number;
+export class CitaUnabogadoComponent implements OnInit {
+  ide: number;
   Citaform: FormGroup;
   abogado: abogado;
-
 
   constructor(
     private citasService : CitasService,
     private formBuilder:FormBuilder,
     private rout: ActivatedRoute,
     private AbogadosService: AbogadosService,
-    private router: Router) { }
+    private router: Router
+  ) { }
 
- 
     ngOnInit(): void {
 
-      this.AbogadosService.getAbogado().subscribe((data)=>{console.log(data);
-      this.abogado=data;
-    });
+      this.ide = Number(this.rout.snapshot.paramMap.get('ide'));
+      
 
     this.Citaform = this.formBuilder.group({
 
-      'id_cita':[null, Validators.required],
       'nulacion_cita':['no', Validators.required],
 'cedula_abogado':[null, Validators.required],
 'cedula_usuario':[null, Validators.required],
@@ -47,11 +42,17 @@ ide: number;
 'lugar_cita':[null, Validators.required],
     
     });
+
+    this.AbogadosService.getAbogadoid(this.ide).subscribe((data)=>{
+      this.abogado=data;
+      this.f.cedula_abogado.setValue(data.cedula);
+    })
     }
+    get f(){return this.Citaform.controls;}
 
 
   addCita(form : cita){
     this.citasService.addCita(form).subscribe(data => console.log(data));
-    this.router.navigate(['/cita/listar']);
+    this.router.navigate(['/cita']);
   }
 }

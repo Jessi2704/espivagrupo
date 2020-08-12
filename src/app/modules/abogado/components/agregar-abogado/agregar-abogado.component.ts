@@ -25,13 +25,12 @@ export class AgregarAbogadoComponent implements OnInit {
     this.Abogadosform = this.formBuilder.group({
     'cedula':[null, Validators.required],
     'nombre':[null, Validators.required],
-    'apellido':[null, Validators.required],
+    'estado': ['HABILITADO', Validators.required],
     'direccion':[null, Validators.required],
     'email':[null, Validators.required],
     'celular':[null, Validators.required],
     'profesion':[null, Validators.required],
-    
-    /*'ESTADO':['habilitado', Validators.required],*/
+
     });
   }
 

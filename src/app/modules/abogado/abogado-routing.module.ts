@@ -4,7 +4,7 @@ import {ListarAbogadoComponent} from './components/listar-abogado/listar-abogado
 import{AgregarAbogadoComponent} from './components/agregar-abogado/agregar-abogado.component';
 import {ListAbogAdminComponent} from './components/list-abog-admin/list-abog-admin.component';
 import {ModalabogadosComponent} from './components/modalabogados/modalabogados.component';
-  import { from } from 'rxjs';
+ 
 
   const routes: Routes = 
 [

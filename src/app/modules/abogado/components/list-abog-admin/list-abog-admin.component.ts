@@ -28,6 +28,12 @@ export class ListAbogAdminComponent implements OnInit {
   editAbogado(abogadoid:number){
     this.router.navigate(['/abogado/modificar/', abogadoid]);
   }
+
+  desabilitarAbogado(abogado:abogado, id:number ){
+    abogado.estado = "DESHABILITADO";
+    this.abogadoservicio.editAbogado(abogado, id).subscribe(data => console.log(data));
+    this.router.navigate(['/abogado']);
+  }
 }
 
  

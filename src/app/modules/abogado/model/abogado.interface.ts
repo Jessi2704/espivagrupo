@@ -3,7 +3,7 @@ export interface abogado
     id_user:string;
     cedula:string;
     nombre:string;
-    apellido:string;
+    estado:string;
     direccion:string;
     email:string;
     celular:string;

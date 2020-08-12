@@ -7,7 +7,7 @@
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-item ">
-          <a class="nav-link" href="/abogado/Agregar"><u>Agregar</u></a>
+          <a class="nav-link" href="/abogado/Agregar">Agregar</a>
         </li>
     <li class="nav-item">
         <a class="nav-link disabled " >ABOGADOS</a>
@@ -30,22 +30,22 @@
               <th class="text-white " scope= "col">ID </th>
                 <th class="text-white " scope= "col">Cedula </th>
                 <th class="text-white" scope= "col">Nombre </th>
-                <th class="text-white" scope= "col">Apellido </th>
                 <th class="text-white" scope= "col">Email </th>
                 <th class="text-white"scope= "col"> Celular</th>
                 <th class="text-white" scope= "col">Direccion </th>
                 <th class="text-white"scope= "col"> Profesion</th>
                 <th class="text-white" scope= "col">MODIFICAR </th>
+                <th class="text-white" scope= "col">DESHABILITAR </th>
                 <th class="text-white"scope= "col"> ELIMINAR</th>
                 
             </tr>
             
             <tbody *ngFor = "let Abogados  of abogado" >
-        <tr>
+
+        <tr *ngIf = "Abogados.estado != 'DESHABILITADO'">
           <td class="text-white">{{Abogados.id_user}} </td>
                     <td class="text-white">{{Abogados.cedula}} </td>
                     <td class="text-white"> {{Abogados.nombre}}</td>
-                    <td class="text-white">{{Abogados.apellido}} </td>
                     <td class="text-white">{{Abogados.email}} </td>
                     <td class="text-white"> {{Abogados.celular}}</td>
                     <td class="text-white"> {{Abogados.direccion}}</td>
@@ -53,9 +53,10 @@
                     <td>
                       <button class="btn btn-primary" (click)="editAbogado(Abogados.id_user)" ></button>
 
-          
-  
                     </td>
+                    <td > <button  type="button" class="btn btn-warning" (click) ="desabilitarAbogado(abogado, Abogados.id_user)"  ></button> </td>
+  
+                  
                     <td > <button  type="button" class="btn btn-danger" (click) ="deleteAbogado(abogado, Abogados.id_user)"  ></button> </td>
                     
         </tr>

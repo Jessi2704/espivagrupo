@@ -28,7 +28,7 @@ export class ModalabogadosComponent implements OnInit {
       this.Abogadosform = this.formBuilder.group({
       'cedula':[null, Validators.required],
       'nombre':[null, Validators.required],
-      'apellido':[null, Validators.required],
+      'estado':[ null, Validators.required],
       'direccion':[null, Validators.required],
       'email':[null, Validators.required],
       'celular':[null, Validators.required],
@@ -38,7 +38,7 @@ export class ModalabogadosComponent implements OnInit {
     this.AbogadosService.getAbogadoid(this.ide).subscribe(data => {
       this.f.cedula.setValue(data.cedula);
       this.f.nombre.setValue(data.nombre);
-      this.f.apellido.setValue(data.apellido);
+      this.f.estado.setValue(data.estado);
       this.f.direccion.setValue(data.direccion);
       this.f.email.setValue(data.email);
       this.f.celular.setValue(data.celular);

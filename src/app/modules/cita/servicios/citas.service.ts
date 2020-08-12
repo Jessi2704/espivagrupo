@@ -30,11 +30,19 @@ export class CitasService {
   }
 
 
+  getCitaid (id: number){
+    return this.http.get<cita>('http://localhost:9090/citas/buscarcita/'+ id);
+  }
+
   addCita(cita: cita)
   {
     let json=JSON.stringify(cita);
     return this.http.post('http://localhost:9090/citas/agregarcita/', json,httpOptions);
   }
 
- 
+  editCita(cita:any, ide:number){ //modificar
+    let json=JSON.stringify(cita);
+    return this.http.put('http://localhost:9090/citas/modificarcita/' + ide, json,httpOptions);
+  }
+
   }
