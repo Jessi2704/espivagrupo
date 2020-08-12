@@ -11,11 +11,11 @@ const routes: Routes = [
     component:AgregarCitaComponent
   },
   {
-    path:'agrega/:ide',
+    path:'agregar/:ide',
     component:CitaUnabogadoComponent
   },
   {
-    path:'listar',
+    path:'',
     component:ListasCitasComponent
   },
   {

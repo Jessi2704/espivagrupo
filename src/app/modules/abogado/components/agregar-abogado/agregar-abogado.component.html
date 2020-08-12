@@ -24,11 +24,13 @@
 
 <div class="jumbotron ">
   <div class="col-md-4 offset-md-4">
-  <form [formGroup] = "Abogadosform" (ngSubmit) = "addAbogado(Abogadosform.value)">
+
+  <form [formGroup] = "Abogadosform" >
+
     <div class = "form-group">
       <label>CEDULA: </label>
       <input type= "text" formControlName = "cedula" class="form-control" >
-  </div>
+    </div>
   
     <div class = "form-group col-md-6 ">
         <label>NOMBRE Y APELLIDO: </label>
@@ -60,13 +62,13 @@
     </select>
   </div>
 
+ 
+<div>
+  <button class="btn btn-light" type= "button" (click)= "addAbogado(Abogadosform.value)"  >GUARDAR</button>
+</div> 
 
-    <div>
-        <button type= "submit" >GUARDAR </button>
-    </div>
-  
 </form>
-    </div>
+    </div> <!---jumbotron-->
 
 
 

@@ -28,20 +28,27 @@
   <div class="jumbotron ">
     <div class="col-md-4 offset-md-4">
     <form [formGroup] = "Citaform" (ngSubmit) = "addCita(Citaform.value)">
+
       <div class = "form-group">
-        <label>CEDULA USUARIO: </label>
-        <input type= "text" formControlName = "cedula_usuario" class="form-control" >
+        <label>CEDULA CLIENTE: </label>
+        <input type= "text" formControlName = "cedula_cliente" class="form-control" >
     </div>
+
+    <div class = "form-group">
+      <label>NOMBRE Y APELLIDO CLIENTE: </label>
+      <input type= "text" formControlName = "nombre_cliente" class="form-control" >
+  </div>
 
    <div class="form-group">
       <label>ABOGADO:</label>
-      <input list="abogados" type="text" class="form-control" formControlName = "cedula_abogado" />
+      <input list="abogados" type="text" class="form-control" formControlName = "nombre_abogado" />
   </div>
-  <datalist id="abogados">
-      <option *ngFor="let Abogados  of abogado" value="{{ Abogados.nombre }}">
+
+  <datalist id="abogados" >
+       <option  *ngFor='let Abogados of abogado'  Value="{{Abogados.nombre}}">
           {{Abogados.nombre }}
-      </option>
-  </datalist> 
+        </option>
+  </datalist>  
 
 
       <div class="form-row">
@@ -67,6 +74,12 @@
       <input type= "time" formControlName = "hora_fin_cita" class="form-control" >
   </div>
       </div> 
+
+      <div class = "form-group">
+        <label>MOTIVO DE LA CITA: </label>
+        <input type= "text" formControlName = "motivo_cita" class="form-control" >
+    </div>
+      
   
       <div>
           <button type= "submit" >GUARDAR </button>

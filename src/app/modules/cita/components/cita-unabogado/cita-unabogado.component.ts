@@ -32,20 +32,25 @@ export class CitaUnabogadoComponent implements OnInit {
 
     this.Citaform = this.formBuilder.group({
 
-      'nulacion_cita':['no', Validators.required],
+      'id_cita':[null, Validators.required],
+      'nombre_abogado':[null, Validators.required],
+'cedula_cliente':[null, Validators.required],
+'nombre_cliente':[null, Validators.required],
+'estado_cita':['PENDIENTE', Validators.required],
+'motivo_cita':[null, Validators.required],
 'cedula_abogado':[null, Validators.required],
-'cedula_usuario':[null, Validators.required],
-'fecha_fin_cita':['lunes', Validators.required],
 'fecha_inicio_cita':[null, Validators.required],
 'hora_fin_cita':[null, Validators.required],
 'hora_inicio_cita':[null, Validators.required],
 'lugar_cita':[null, Validators.required],
+
     
     });
 
     this.AbogadosService.getAbogadoid(this.ide).subscribe((data)=>{
       this.abogado=data;
       this.f.cedula_abogado.setValue(data.cedula);
+      this.f.nombre_abogado.setValue(data.nombre);
     })
     }
     get f(){return this.Citaform.controls;}
@@ -53,6 +58,6 @@ export class CitaUnabogadoComponent implements OnInit {
 
   addCita(form : cita){
     this.citasService.addCita(form).subscribe(data => console.log(data));
-    this.router.navigate(['/cita']);
+    this.router.navigate(['/cita/admin']);
   }
 }

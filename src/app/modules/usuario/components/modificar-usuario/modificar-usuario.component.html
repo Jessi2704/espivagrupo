@@ -1,0 +1,22 @@
+
+<form [formGroup] = "Usuarioform" (ngSubmit) = "editUsuario(Usuarioform.value)">
+    <div class="form-row">
+      <div class = "form-group col-md-6">
+          <label> ABOGADO: </label>
+          <input type= "text" formControlName = "nombre_usuario" class="form-control" readonly>
+      </div>
+  
+      <div class = "form-group col-md-6">
+        <label>NICKNAME: </label>
+        <input type= "text" formControlName = "apodo" class="form-control">
+    </div>
+  
+    <div class = "form-group">
+      <label>PASSWORD: </label>
+      <input type= "text" formControlName = "contrasenia" class="form-control" >
+  </div>
+      </div> 
+      <div>
+          <button type= "submit" >GUARDAR </button>
+      </div>
+  </form>

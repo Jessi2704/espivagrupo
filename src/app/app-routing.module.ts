@@ -22,7 +22,16 @@ const routes: Routes = [{
 {
   path: 'login',
   loadChildren:() =>  import('./modules/principal/components/login/login.component').then(c => c.LoginComponent)
+},
+{
+  path: 'administrador',
+  loadChildren:() =>  import('./modules/principal/components/administrador/administrador.component').then(c => c.AdministradorComponent)
+},
+{
+  path: 'abogado',
+  loadChildren:() =>  import('./modules/principal/components/abogado/abogado.component').then(c => c.AbogadoComponent)
 }
+
 
 ];
 

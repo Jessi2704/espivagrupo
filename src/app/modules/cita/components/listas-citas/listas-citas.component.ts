@@ -24,10 +24,21 @@ export class ListasCitasComponent implements OnInit {
 
   deleteCita(cita:cita, id: number ){
     this.citasservice.deleteCita(cita, id).subscribe(data => console.log(data));
-    this.router.navigate(['abogado']);
+    this.router.navigate(['/cita/admin']);
   }
 
   editCita(citaid:number){
     this.router.navigate(['/cita/modificar/', citaid]);
   }
+
+  anularcita(cita:cita, id:number ){
+    cita.estado_cita = "ANULADO";
+    this.citasservice.editCita(cita, id).subscribe(data => console.log(data));
+    
+  } 
+  cumplircita(cita:cita, id:number ){
+    cita.estado_cita = "CUMPLIDA";
+    this.citasservice.editCita(cita, id).subscribe(data => console.log(data));
+    
+  } 
 }

@@ -12,14 +12,18 @@
       
         <div class="form-group">
             <label>ABOGADO:</label>
-            <input type= "text" class="form-control"  formControlName = "cedula_abogado" />
+            <input type= "text" class="form-control"  formControlName = "nombre_abogado" readonly/>
         </div>
 
         <div class="form-group">
-        <label>CEDULA USUARIO:</label>
-        <input type= "text" class="form-control"  formControlName = "cedula_usuario" />
+        <label>CEDULA CLIENTE:</label>
+        <input type= "text" class="form-control"  formControlName = "cedula_cliente"  readonly/>
     </div>
-    
+
+    <div class="form-group">
+        <label>NOMBRE CLIENTE:</label>
+        <input type= "text" class="form-control"  formControlName = "nombre_cliente"  readonly/>
+    </div>
             
             <div class = "form-group col-md-6 ">
                 <label>FECHA CITA: </label>
@@ -42,7 +46,22 @@
             <input type= "time" formControlName = "hora_fin_cita" class="form-control" >
         </div>
             </div> 
+
+            <div class = "form-group">
+                <label>MOTIVO  CITA: </label>
+                <input type= "text" formControlName = "motivo_cita" class="form-control" >
+            </div>
+            
         
+                <div class = "form-group">
+                    <label>ESTADO:</label>
+                    <select formControlName = "estado_cita" class="form-control">
+                      <option selected >PENDIENTE</option>
+                      <option selected >ANULADO</option>
+                      <option selected >CUMPLIDA</option>
+                    </select>
+                  </div> 
+
             <div>
                 <button type= "submit" >GUARDAR </button>
             </div>

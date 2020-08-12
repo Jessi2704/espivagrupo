@@ -4,6 +4,8 @@ import{AbogadosService} from'../../servicios/abogados.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 import { Validators } from '@angular/forms';
+import {usuario} from '../../../usuario/model/usuario.interface';
+import {UsuariosService} from '../../../usuario/servicios/usuarios.service';
 
 @Component({
   selector: 'app-agregar-abogado',
@@ -13,8 +15,7 @@ import { Validators } from '@angular/forms';
 export class AgregarAbogadoComponent implements OnInit {
 
   Abogadosform: FormGroup;
-
-
+  Usuarioform : FormGroup;
 
   constructor(
     private abogadosService : AbogadosService,
@@ -32,13 +33,14 @@ export class AgregarAbogadoComponent implements OnInit {
     'profesion':[null, Validators.required],
 
     });
+
   }
 
   addAbogado (form : abogado){
     this.abogadosService.setAbogado(form).subscribe(data => console.log(data));
-    this.router.navigate(['/abogado/admin']);
-
+    this.router.navigate(['/usuario/agregar/', form.id_user]);
   }
+
 }
 
   

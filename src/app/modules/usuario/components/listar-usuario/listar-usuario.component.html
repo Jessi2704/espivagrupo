@@ -28,21 +28,19 @@
        
 <table class ="table">
     <tr>
-        <th class="text-white " scope= "col"> Cedula </th>
-        <th class="text-white" scope= "col">Nombre </th>
-        <th class="text-white" scope= "col">Apellido </th>
-        <th class="text-white" scope= "col">Email </th>
-        <th class="text-white"scope= "col"> Celular</th>
-        
+        <th class="text-white" scope= "col">NOMBRE </th>
+        <th class="text-white" scope= "col">NICKNAME </th>
+        <th class="text-white" scope= "col">ELIMINAR </th>
+
     </tr>
     
     <tbody *ngFor = "let Usuario  of usuario">
 <tr>
-            <td class="text-white">{{Usuario.cedula_usuario}} </td>
+            
             <td class="text-white">{{Usuario.nombre_usuario}} </td>
-            <td class="text-white">{{Usuario.apellido_usuario}} </td>
-            <td class="text-white">{{Usuario.email_usuario}} </td>
-            <td class="text-white">{{Usuario.celular_usuario}} </td>
+            <td class="text-white">{{Usuario.apodo}} </td>
+            <td > <button  type="button" class="btn btn-danger" (click) ="deleteUsuario(usuario, Usuario.id_usuario)"  ></button> </td>
+
             
 </tr>
 

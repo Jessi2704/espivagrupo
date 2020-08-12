@@ -4,7 +4,8 @@ import {AbogadosService} from '../../servicios/abogados.service';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {Router, ActivatedRoute} from '@angular/router'; 
 import { Validators } from '@angular/forms';
-
+import {usuario} from '../../../usuario/model/usuario.interface';
+import {UsuariosService} from '../../../usuario/servicios/usuarios.service';
 
 
 @Component({

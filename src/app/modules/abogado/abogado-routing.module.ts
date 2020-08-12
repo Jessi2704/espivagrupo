@@ -17,7 +17,7 @@ import {ModalabogadosComponent} from './components/modalabogados/modalabogados.c
   },
 
   {
-    path:'admin', component:ListAbogAdminComponent
+    path:'listar', component:ListAbogAdminComponent
   },
   {
     path:'modificar/:ide', component:ModalabogadosComponent

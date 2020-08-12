@@ -28,15 +28,17 @@
         <table class ="table">
             <tr>
               <th class="text-white " scope= "col">Codigo </th>
-              <th class="text-white " scope= "col">Cedula Usuario </th>
+              <th class="text-white " scope= "col">Cedula Cliente </th>
+              <th class="text-white " scope= "col">Nombre Cliente </th>
+              <th class="text-white " scope= "col">Nombre Abogado </th>
                 <th class="text-white " scope= "col">Fecha cita </th>
                 <th class="text-white" scope= "col">Hora inicio </th>
-                <th class="text-white" scope= "col">Hora fin </th>
                 <th class="text-white" scope= "col">Lugar cita </th>
-               <!-- <th class="text-white"scope= "col"> Celular</th>
-                <th class="text-white" scope= "col">Direccion </th>
-                <th class="text-white"scope= "col"> Profesion</th> -->
+                <th class="text-white"scope= "col"> Motivo</th>
+              <th class="text-white" scope= "col">Estado </th>
                 <th class="text-white" scope= "col">MODIFICAR </th>
+                <th class="text-white" scope= "col">ANULAR </th>
+                <th class="text-white"scope= "col"> CITA CUMPLIDA</th>
                 <th class="text-white"scope= "col"> ELIMINAR</th>
                 
             </tr>
@@ -44,20 +46,22 @@
             <tbody *ngFor = "let Citas  of cita" >
         <tr>
           <td class="text-white">{{Citas.id_cita}} </td>
-          <td class="text-white">{{Citas.cedula_usuario}} </td>
+          <td class="text-white">{{Citas.cedula_cliente}} </td>
+          <td class="text-white">{{Citas.nombre_cliente}} </td>
+          <td class="text-white">{{Citas.nombre_abogado}} </td>
                     <td class="text-white">{{Citas.fecha_inicio_cita}} </td>
                     <td class="text-white"> {{Citas.hora_inicio_cita}}</td>
-                    <td class="text-white">{{Citas.hora_fin_cita}} </td>
                     <td class="text-white">{{Citas.lugar_cita}} </td>
-                    <!--<td class="text-white"> {{Citas.}}</td>
-                    <td class="text-white"> {{Citas.}}</td>
-                    <td class="text-white"> {{Citas.}}</td>-->
+                    <td class="text-white"> {{Citas.motivo_cita}}</td>
+                    <td class="text-white"> {{Citas.estado_cita}}</td>
                     <td>
                      <button class="btn btn-primary" (click)="editCita(Citas.id_cita)" ></button>
-                      
-          
-  
                     </td>
+                   
+                      <td > <button  type="button" class="btn btn-warning" (click) ="anularcita(cita, Citas.id_cita)"  ></button> </td>
+                      <td > <button  type="button" class="btn btn-warning" (click) ="cumplircita(cita, Citas.id_cita)"  ></button> </td>
+
+                     
                     <td > <button  type="button" class="btn btn-danger" (click) ="deleteCita(cita, Citas.id_cita)"  ></button> </td>     
         </tr>
             </tbody>
