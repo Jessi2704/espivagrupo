@@ -61,7 +61,7 @@ export class ModificarCitasComponent implements OnInit {
   editCita(form: cita ): void {
    
       this.CitasService.editCita(form, this.ide).subscribe(data => console.log(data));
-      this.router.navigate(['cita/admin']);}  
+      this.router.navigate(['/cita']);}  
   }
 
 

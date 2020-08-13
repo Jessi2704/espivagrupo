@@ -32,39 +32,39 @@
       <input type= "text" formControlName = "cedula" class="form-control" >
     </div>
   
-    <div class = "form-group col-md-6 ">
+    <div class = "form-group  ">
         <label>NOMBRE Y APELLIDO: </label>
         <input type= "text" formControlName = "nombre" class="form-control" >
     </div>
 
-    <div class="form-row">
-    <div class = "form-group col-md-6">
+    
+    <div class = "form-group ">
       <label>DIRECCION: </label>
       <input type= "text" formControlName = "direccion" class="form-control">
   </div>
-  <div class = "form-group">
-    <label>CELULAR: </label>
-    <input type= "tel" formControlName = "celular" class="form-control" >
-</div>
-    </div> 
+  
 
   <div class = "form-group">
       <label>EMAIL: </label>
       <input type= "email" formControlName = "email" class="form-control" >
   </div>
+  <div class="form-row">
+  <div class = "form-group col-md-6">
+    <label>CELULAR: </label>
+    <input type= "tel" formControlName = "celular" class="form-control" >
+</div> 
 
-
-  <div class = "form-group">
+  <div class = "form-group col-md-6">
     <label>PROFESION:</label>
     <select formControlName = "profesion" class="form-control">
       <option selected >TRANSITO</option>
       <option selected >CIVIL</option>
     </select>
   </div>
-
- 
+  </div>
 <div>
   <button class="btn btn-light" type= "button" (click)= "addAbogado(Abogadosform.value)"  >GUARDAR</button>
+  <a class="btn btn-light" style= "margin-left: 20px;"type= "button" href="/abogado/listar ">CANCELAR</a>
 </div> 
 
 </form>

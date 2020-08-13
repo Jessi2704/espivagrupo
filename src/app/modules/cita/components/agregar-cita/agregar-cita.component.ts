@@ -57,6 +57,6 @@ ide: number;
   addCita(form : cita){
     
     this.citasService.addCita(form).subscribe(data => console.log(data));
-    this.router.navigate(['/cita/admin']);
+    this.router.navigate(['/cita']);
   }
 }

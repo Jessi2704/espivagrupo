@@ -22,6 +22,7 @@ export class ListAbogAdminComponent implements OnInit {
 
   deleteAbogado(abogado:abogado, id: number ){
     this.abogadoservicio.deleteAbogado(abogado, id).subscribe(data => console.log(data));
+    location.reload();
     
   }
 

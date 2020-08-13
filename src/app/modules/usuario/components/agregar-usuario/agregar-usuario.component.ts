@@ -53,6 +53,6 @@ export class AgregarUsuarioComponent implements OnInit {
 
   addUsuario(form : usuario){
     this.usuarioService.addUsuario(form).subscribe(data => console.log(data));
-    this.router.navigate(['']);
+    this.router.navigate(['/administrador']);
   }
 }

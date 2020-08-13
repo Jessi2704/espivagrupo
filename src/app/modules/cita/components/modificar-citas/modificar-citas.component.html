@@ -12,7 +12,7 @@
       
         <div class="form-group">
             <label>ABOGADO:</label>
-            <input type= "text" class="form-control"  formControlName = "nombre_abogado" readonly/>
+            <input type= "text" class="form-control"  formControlName = "nombre_abogado"  readonly/>
         </div>
 
         <div class="form-group">
@@ -25,27 +25,27 @@
         <input type= "text" class="form-control"  formControlName = "nombre_cliente"  readonly/>
     </div>
             
-            <div class = "form-group col-md-6 ">
+            <div class = "form-group  ">
                 <label>FECHA CITA: </label>
                 <input type= "date" formControlName = "fecha_inicio_cita" class="form-control" >
             </div>
-        
-            <div class = "form-group">
+        <div class="form row">
+            <div class = "form-group col-md-6 ">
                 <label>HORA CITA: </label>
                 <input type= "time" formControlName = "hora_inicio_cita" class="form-control" >
             </div>
-        
-            <div class="form-row">
             <div class = "form-group col-md-6">
+                <label>HORA FIN CITA: </label>
+                <input type= "time" formControlName = "hora_fin_cita" class="form-control" >
+            </div>
+        </div>
+            <div class = "form-group ">
               <label>LUGAR CITA: </label>
               <input type= "text" formControlName = "lugar_cita" class="form-control">
           </div>
       
-          <div class = "form-group">
-            <label>HORA FIN CITA: </label>
-            <input type= "time" formControlName = "hora_fin_cita" class="form-control" >
-        </div>
-            </div> 
+         
+             
 
             <div class = "form-group">
                 <label>MOTIVO  CITA: </label>
@@ -63,7 +63,9 @@
                   </div> 
 
             <div>
-                <button type= "submit" >GUARDAR </button>
+                <button  class="btn btn-light" type= "submit" >GUARDAR </button>
+                <a class="btn btn-light" style= "margin-left: 20px;"type= "button" href="/cita ">CANCELAR</a>
+
             </div>
           
         </form>

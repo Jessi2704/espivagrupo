@@ -1,5 +1,19 @@
 
-     
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/administrador">Grupo EspiVa</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+  
+        <li class="nav-item ">
+          <a class="nav-link" href="/abogado/listar ">Lista</a>
+        </li>
+    <li class="nav-item">
+        <a class="nav-link disabled " >ABOGADOS</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+   
 <style>
     .jumbotron {
           background-color:#217DA2;  
@@ -16,34 +30,36 @@
         <input type= "text" formControlName = "cedula" class="form-control" >
     </div>
      
-      <div class = "form-group col-md-6 ">
+      <div class = "form-group  ">
           <label>NOMBRE Y APELLIDO: </label>
           <input type= "text" formControlName = "nombre" class="form-control" >
       </div>
   
-      <div class="form-row">
-      <div class = "form-group col-md-6">
+      
+      <div class = "form-group">
         <label>DIRECCION: </label>
         <input type= "text" formControlName = "direccion" class="form-control">
     </div>
-    <div class = "form-group">
-      <label>CELULAR: </label>
-      <input type= "tel" formControlName = "celular" class="form-control" >
-  </div>
-      </div> 
+    
+     
   
     <div class = "form-group">
         <label>EMAIL: </label>
         <input type= "email" formControlName = "email" class="form-control" >
     </div>
+    <div class="form-row">
+      <div class = "form-group  col-md-6">
+        <label>CELULAR: </label>
+        <input type= "tel" formControlName = "celular" class="form-control" >
+    </div>
   
-  
-    <div class = "form-group">
+    <div class = "form-group  col-md-6">
       <label>PROFESION:</label>
       <select formControlName = "profesion" class="form-control">
         <option selected >TRANSITO</option>
         <option selected >CIVIL</option>
       </select>
+    </div>
     </div>
 
    <div class = "form-group">
@@ -56,7 +72,8 @@
   
   
       <div>
-          <button type= "submit" >GUARDAR </button>
+          <button  class="btn btn-light" type= "submit" >GUARDAR </button>
+          <a class="btn btn-light" style= "margin-left: 20px;"type= "button" href="/abogado/listar ">CANCELAR</a>
       </div>
     
   </form>

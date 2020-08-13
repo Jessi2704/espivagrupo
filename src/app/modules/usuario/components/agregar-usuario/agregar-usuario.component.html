@@ -22,6 +22,8 @@
       }
 </style>
 <div clas= "jumbotron text-center">
+  <div class="card"style="width: 40rem; margin-left: 400px; margin-top: 80px;">
+        <div class="card-body">
 <form [formGroup] = "Usuarioform" (ngSubmit) = "addUsuario(Usuarioform.value)">
   <div class="form-row">
     <div class = "form-group col-md-6">
@@ -40,7 +42,11 @@
 </div>
     </div> 
     <div>
-        <button type= "submit" >GUARDAR </button>
+        <button class="btn btn-light" type= "submit" >GUARDAR </button>
+        <a class="btn btn-light" style= "margin-left: 20px;"type= "button" href="/abogado/listar ">CANCELAR</a>
+
     </div>
 </form>
+        </div>
+  </div>
 </div>

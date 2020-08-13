@@ -33,6 +33,7 @@ export class AgregaradminComponent implements OnInit {
 
     addUsuario (form : usuario){
   this.UsuarioService.addUsuario(form).subscribe(data => console.log(data));
+  this.router.navigate(['/usuario']);
 }
 
 }

@@ -23,15 +23,20 @@ export class AgregarAbogadoComponent implements OnInit {
 
   ngOnInit(): void {
     this.Abogadosform = this.formBuilder.group({
-    'cedula':[null, Validators.required],
-    'nombre':[null, Validators.required],
+    'cedula':[null, Validators.required,
+                    Validators.minLength(10),
+                    Validators.pattern(/^[0-9]*$/)],
+    'nombre':[null, Validators.required,
+                    Validators.minLength(5),
+                    Validators.pattern(/^[a-zA-Z]*$/)],
     'estado': ['HABILITADO', Validators.required],
     'direccion':[null, Validators.required],
-    'email':[null, Validators.required],
-    'celular':[null, Validators.required],
+    'email':[null, Validators.required,
+                   Validators.email],
+    'celular':[null, Validators.required,
+                    Validators.pattern(/^[0-9]*$/)],
     'profesion':[null, Validators.required],
     });
-
   }
 
   addAbogado (form : abogado){

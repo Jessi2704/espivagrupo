@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
           this.token = sessionStorage.setItem('token',this.user2.apodo);
           this.routerLink.navigate(['/administrador']);
         }else{
-          alert('la contraseña no es la correcta');
+          alert('Usuario no encontrado');
         }
       },
       err=>{

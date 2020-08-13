@@ -18,6 +18,6 @@ export class ListarAbogadoComponent implements OnInit {
   }
   
   Cita(abogadoid: number){
-    this.router.navigate(['/cita/agrega/', abogadoid]);
+    this.router.navigate(['/cita/agregar/', abogadoid]);
   }
 }
