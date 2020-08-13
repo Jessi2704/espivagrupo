@@ -22,7 +22,7 @@ export class ListAbogAdminComponent implements OnInit {
 
   deleteAbogado(abogado:abogado, id: number ){
     this.abogadoservicio.deleteAbogado(abogado, id).subscribe(data => console.log(data));
-    this.router.navigate(['/admin']);
+    
   }
 
   editAbogado(abogadoid:number){
@@ -34,6 +34,7 @@ export class ListAbogAdminComponent implements OnInit {
     abogado.estado = "DESHABILITADO";
     this.abogadoservicio.editAbogado(abogado, id).subscribe(data => console.log(data));
   }
+  refrescar(){location.reload();}
 }
 
  

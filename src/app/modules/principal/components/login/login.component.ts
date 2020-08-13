@@ -2,6 +2,10 @@ import {usuario} from '../../../usuario/model/usuario.interface';
 import { Component, OnInit } from '@angular/core';
 import {UsuariosService} from '../../../usuario/servicios/usuarios.service';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+import { isError } from 'util';
+import {FormsModule} from '@angular/forms'
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -23,14 +27,15 @@ export class LoginComponent implements OnInit {
     nombre_usuario:'',
     apodo:'',
     contrasenia:'',
-    id_usuario:9
+    id_usuario:9,
   }
-  ngOnInit(): void {
-    
-  }
+
+
   token:any;
 
-  ver(){
+  ngOnInit(){}
+
+  ver() {
     this.usuarioService.getUsuarioid(this.user.id_usuario).subscribe(
       res=>{
         
@@ -47,8 +52,12 @@ export class LoginComponent implements OnInit {
         alert('Usuario no encontrado');
         console.error(err)
       }
-    )
-
+    )  
   }
 }
+
+    
+  
+
+  
 

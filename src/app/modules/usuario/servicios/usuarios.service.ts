@@ -26,11 +26,11 @@ export class UsuariosService {
 
   deleteUsuario(usuario:any, id:number){
     let json=JSON.stringify(usuario);
-    return this.http.delete('http://localhost:9090/usuarios/eliminarusuario'+ id);
+    return this.http.delete('http://localhost:9090/usuarios/eliminarusuario/'+ id);
   }
     
   getUsuarioid (id: number){
-    return this.http.get<usuario>('http://localhost:9090/usuarios/buscarusuario'+ id);
+    return this.http.get<usuario>('http://localhost:9090/usuarios/buscarusuario/'+ id);
   }
 
   addUsuario(usuario: usuario)

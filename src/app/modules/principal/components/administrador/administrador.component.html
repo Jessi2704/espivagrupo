@@ -14,30 +14,35 @@
             background-size: cover;
       color:black;
         }
+
     </style>
         <div class="body text-center"style=" height: 700px; ">         
           <nav class="navbar navbar-expand-lg navbar-light .bg-light" >
+            <a class="navbar-brand" href="/administrador">ADMINISTRADOR</a>
+
             <a class="navbar-brand" href="/"><h4> </h4></a>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item ">
-                  <a class="nav-link" href="#"><H4>Usuarios</H4></a>
+                  <a class="nav-link" href="/usuario"><H4>Usuarios</H4></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/cita"><H4>Citas</H4></a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <H4>Abogados</H4>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">listar</a>
-                      <a class="dropdown-item" href="#">Modificar</a>
-                      <a class="dropdown-item" href="#">Agregar</a>
-                    </div>
-
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled " ><H4>ADMINISTRADOR</H4></a>
+  
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/abogado/listar"><H4>Abogados</H4></a>
                   </li>
+              
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/usuario/agregar"><H4>Agregar </H4></a>
+                  </li>
+                  
+                <li class="nav-item ">
+                  <a class="nav-link"(click)="cerrar()"><H4>CERRAR SESION</H4></a>
+                </li>
+                
               </ul>
                 
             </div>

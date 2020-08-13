@@ -14,14 +14,10 @@
 
     <!-- Login Form -->
     <form>
-      <input type="text" id="login"  value ="user.apodo" class="fadeIn second" name="login" placeholder="nickname" >
-      <input type="text" id="password" value ="user.contrasenia" class="fadeIn third" name="login" placeholder="password">
-      <button class="btn btn-success" (click)="ver()">Log In</button>
-
-    </form>
-
-
-
+      <input type="text" id="login"  [(ngModel)]="user.apodo" class="fadeIn second" name="login" placeholder="nickname" >
+      <input type="text" id="password"  [(ngModel)]="user.contrasenia" class="fadeIn third" name="login" placeholder="password">
+      <button class="btn btn-success" (click)="ver()">INICIAR</button>   
+     </form>
     
   </div>
 </div>

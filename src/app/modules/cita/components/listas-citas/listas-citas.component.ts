@@ -24,7 +24,7 @@ export class ListasCitasComponent implements OnInit {
 
   deleteCita(cita:cita, id: number ){
     this.citasservice.deleteCita(cita, id).subscribe(data => console.log(data));
-    this.router.navigate(['/cita/admin']);
+    location.reload();
   }
 
   editCita(citaid:number){
@@ -41,4 +41,5 @@ export class ListasCitasComponent implements OnInit {
     this.citasservice.editCita(cita, id).subscribe(data => console.log(data));
     
   } 
+  
 }

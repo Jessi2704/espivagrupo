@@ -46,7 +46,9 @@
 
   <datalist id="abogados" >
        <option  *ngFor='let Abogados of abogado'  Value="{{Abogados.nombre}}">
-          {{Abogados.nombre }}
+        <div *ngIf = "Abogados.estado != 'DESHABILITADO'">
+              {{Abogados.nombre }}
+        </div>
         </option>
   </datalist>  
 

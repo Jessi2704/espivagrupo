@@ -12,7 +12,8 @@ import { AbogadoComponent } from './components/abogado/abogado.component';
   declarations: [PaginaPrincipalComponent, LoginComponent, AdministradorComponent, AbogadoComponent],
   imports: [
     CommonModule,
-    PrincipalRoutingModule
+    PrincipalRoutingModule,
+    FormsModule
   ]
 })
 export class PrincipalModule { }

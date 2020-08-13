@@ -17,5 +17,7 @@ export class ListarUsuarioComponent implements OnInit {
 
   deleteUsuario(usuario:usuario, id: number ){
     this.usuarioservicio.deleteUsuario(usuario, id).subscribe(data => console.log(data));
+    location.reload();
   }
+ 
 }
