@@ -30,11 +30,17 @@ export class ListAbogAdminComponent implements OnInit {
   }
 
 
-  deshabilitarAbogado(abogado:abogado, id:number ){
-    abogado.estado = "DESHABILITADO";
-    this.abogadoservicio.editAbogado(abogado, id).subscribe(data => console.log(data));
+  deshabilitarAbogado(aboga:abogado, id:number ){
+    aboga.estado = "DESHABILITADO";
+    this.abogadoservicio.editAbogado(aboga, id).subscribe(data => console.log(data));
+    location.reload();
   }
-  refrescar(){location.reload();}
+
 }
 
- 
+/*if(this.Abogadosform.valid){
+  this.AbogadosService.editAbogado(form, this.ide).subscribe(data => console.log(data));
+  this.router.navigate(['/abogado/listar']);}
+  else{
+    //mensaje error
+  }*/

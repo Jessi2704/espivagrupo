@@ -52,7 +52,7 @@ export class ModalabogadosComponent implements OnInit {
   editAbogado(form: abogado ): void {
     if(this.Abogadosform.valid){
       this.AbogadosService.editAbogado(form, this.ide).subscribe(data => console.log(data));
-      this.router.navigate(['/abogado/admin']);}
+      this.router.navigate(['/abogado/listar']);}
       else{
         //mensaje error
       }

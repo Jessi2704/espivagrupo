@@ -34,11 +34,13 @@ export class ListasCitasComponent implements OnInit {
   anularcita(cita:cita, id:number ){
     cita.estado_cita = "ANULADO";
     this.citasservice.editCita(cita, id).subscribe(data => console.log(data));
+    location.reload();
     
   } 
   cumplircita(cita:cita, id:number ){
     cita.estado_cita = "CUMPLIDA";
     this.citasservice.editCita(cita, id).subscribe(data => console.log(data));
+    location.reload();
     
   } 
   

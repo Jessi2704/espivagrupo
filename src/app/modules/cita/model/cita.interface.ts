@@ -1,6 +1,6 @@
 export interface cita
 {
-id_cita:string;
+id_cita:number;
 nombre_abogado:string;
 cedula_abogado: string;
 cedula_cliente:string;

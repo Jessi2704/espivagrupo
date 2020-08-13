@@ -1,6 +1,6 @@
 export interface abogado
 {
-    id_user:string;
+    id_user:number;
     cedula:string;
     nombre:string;
     estado:string;

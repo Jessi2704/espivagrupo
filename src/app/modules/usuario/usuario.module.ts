@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import { UsuarioRoutingModule } from './usuario-routing.module';
 import { ListarUsuarioComponent } from './components/listar-usuario/listar-usuario.component';
@@ -14,7 +14,8 @@ import { ModificarUsuarioComponent } from './components/modificar-usuario/modifi
   imports: [
     CommonModule,
     UsuarioRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class UsuarioModule { }
