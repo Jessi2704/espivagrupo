@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {FormsModule} from '@angular/forms'
 import { PrincipalRoutingModule } from './principal-routing.module';
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 import { LoginComponent } from './components/login/login.component';

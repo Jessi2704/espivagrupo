@@ -10,6 +10,7 @@ export class AdministradorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    let token=sessionStorage.getItem("token")
   }
 
 }

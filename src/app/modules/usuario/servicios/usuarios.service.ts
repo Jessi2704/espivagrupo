@@ -3,6 +3,8 @@ import {usuario } from '../model/usuario.interface';
 import {HttpClient} from '@angular/common/http';
 import {HttpHeaders} from '@angular/common/http';
 import {Observable } from 'rxjs';
+import { CookieService } from "ngx-cookie-service";
+
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
@@ -14,8 +16,9 @@ const httpOptions = {
 })
 export class UsuariosService {
 
-  constructor(private http:HttpClient) 
+  constructor(private http:HttpClient, private cookies: CookieService) 
   { }
+
   getUsuario():Observable<usuario>
   {
     return this.http.get<usuario>('http://localhost:9090/usuarios/buscarusuario');
@@ -39,7 +42,12 @@ editUsuario(usuario:any, ide:number){ //modificar
   let json=JSON.stringify(usuario);
   return this.http.put('http://localhost:9090/usuarios/modificarusuario/' + ide, json,httpOptions);
 }
-
+setToken(token: String|any) {
+  this.cookies.set("token",token);
+}
+getToken() {
+  return this.cookies.get("token");
+}
 
 
 }

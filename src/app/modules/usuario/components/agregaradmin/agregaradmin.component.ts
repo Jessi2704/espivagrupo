@@ -31,7 +31,7 @@ export class AgregaradminComponent implements OnInit {
     }
 
 
-addAbogado (form : usuario){
+    addUsuario (form : usuario){
   this.UsuarioService.addUsuario(form).subscribe(data => console.log(data));
 }
 

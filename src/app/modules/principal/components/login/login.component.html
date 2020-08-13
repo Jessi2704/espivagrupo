@@ -14,10 +14,13 @@
 
     <!-- Login Form -->
     <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" href= "/" value="Iniciar">
+      <input type="text" id="login"  value ="user.apodo" class="fadeIn second" name="login" placeholder="nickname" >
+      <input type="text" id="password" value ="user.contrasenia" class="fadeIn third" name="login" placeholder="password">
+      <button class="btn btn-success" (click)="ver()">Log In</button>
+
     </form>
+
+
 
     
   </div>

@@ -1,6 +1,6 @@
 export interface usuario
 {
-    id_usuario:string;
+    id_usuario:number;
     cedula_usuario:string;
     nombre_usuario:string;
     apodo:string;
